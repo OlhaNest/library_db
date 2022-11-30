@@ -394,5 +394,11 @@ public class DB_Util {
 
     }
 
+    public static String getAnyRowAnyColumnValue(int rowIndex, int columnIndex){
+
+        return getCellValue(rowIndex,columnIndex) ;
+
+    }
+
 
 }
