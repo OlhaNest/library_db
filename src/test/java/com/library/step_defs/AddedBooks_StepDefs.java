@@ -62,7 +62,7 @@ bookPage.saveChanges.click();
     public void the_librarian_verify_new_book_by(String expected) {
         BrowserUtil.waitFor(2);
         bookPage.search.sendKeys(expected);
-        BrowserUtil.waitFor(1);
+        BrowserUtil.waitFor(2);
         String actualBookName = bookPage.bookTextFirstRow.getText();
         Assert.assertEquals(expected, actualBookName);
     }
@@ -72,10 +72,10 @@ bookPage.saveChanges.click();
        DB_Util.runQuery("select id, name, author from books\n" +
                "where name = '" + expectedName + "' and author='" + expectedAuthor + "'\n" +
                "order by id desc;");
-       //String actualName = DB_Util.getCellValue(1, 2);
-      // String actualAuthor = DB_Util.getCellValue(1, 3);
-//Assert.assertEquals(expectedName, actualName);
-//Assert.assertEquals(expectedAuthor, actualAuthor);
+       String actualName = DB_Util.getCellValue(1, 2);
+      String actualAuthor = DB_Util.getCellValue(1, 3);
+Assert.assertEquals(expectedName, actualName);
+Assert.assertEquals(expectedAuthor, actualAuthor);
 
 
 
