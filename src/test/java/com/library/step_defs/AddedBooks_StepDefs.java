@@ -5,6 +5,7 @@ import com.library.pages.BookPage;
 import com.library.pages.LoginPage;
 import com.library.utilities.BrowserUtil;
 import com.library.utilities.ConfigurationReader;
+import com.library.utilities.DB_Util;
 import com.library.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -68,7 +69,7 @@ bookPage.saveChanges.click();
 
    @Then("the librarian verify new book from database by {string}")
     public void the_librarian_verify_new_book_from_database_by(String string) {
-
+       DB_Util.runQuery("select * from books");
 
     }
 
