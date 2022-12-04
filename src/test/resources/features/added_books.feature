@@ -12,7 +12,7 @@ Feature: As a librarian, I should be able to add new books to the library
     And the librarian choose the book category "<Book Category>"
     And the librarian click to save changes
     Then the librarian verify new book by "<Book Name>"
-#Then the librarian verify new book from database by "<Book Name>"
+    Then the librarian verify new book from database by "<Book Name>" and "<Author>"
 
 
     Examples:
