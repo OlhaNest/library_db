@@ -70,8 +70,10 @@ bookPage.saveChanges.click();
    @Then("the librarian verify new book from database by {string} and {string}")
     public void the_librarian_verify_new_book_from_database_by(String name1, String author1) {
        DB_Util.runQuery("select id, name, author from books\n" +
-               "where name = name and author='Robert C.Martin'\n" +
+               "where name = '" + name1 + "' and author='" + author1 + "'\n" +
                "order by id desc;");
+
+
 
     }
 
