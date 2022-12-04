@@ -21,7 +21,7 @@ public class DB_Util {
      * @param username username for database
      * @param password password for database
      */
-    public static void createConnection(String url , String username, String password){
+    public static void createConnection(String url, String username, String password){
 
 
         try {
