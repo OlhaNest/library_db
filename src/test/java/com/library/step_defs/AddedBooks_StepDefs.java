@@ -69,16 +69,16 @@ bookPage.saveChanges.click();
 
    @Then("the librarian verify new book from database by {string} and {string}")
     public void the_librarian_verify_new_book_from_database_by(String expectedName, String expectedAuthor) {
+
        DB_Util.runQuery("select id, name, author from books\n" +
                "where name = '" + expectedName + "' and author='" + expectedAuthor + "'\n" +
                "order by id desc;");
+
        String actualName = DB_Util.getCellValue(1, 2);
       String actualAuthor = DB_Util.getCellValue(1, 3);
+
 Assert.assertEquals(expectedName, actualName);
 Assert.assertEquals(expectedAuthor, actualAuthor);
-
-
-
     }
 
 
