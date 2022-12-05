@@ -1,11 +1,10 @@
 package com.library.pages;
 
-import com.cydeo.utility.ConfigurationReader;
-import com.cydeo.utility.Driver;
+import com.library.utilities.ConfigurationReader;
+import com.library.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 
 public class LoginPage {
 
@@ -34,7 +33,7 @@ public class LoginPage {
 
     public void login2(String userType){
 
-        String username=ConfigurationReader.getProperty(userType+"_username");
+        String username= ConfigurationReader.getProperty(userType+"_username");
         String password=ConfigurationReader.getProperty("password");
 
 
