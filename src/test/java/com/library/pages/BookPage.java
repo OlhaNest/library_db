@@ -5,6 +5,7 @@ import com.library.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.w3c.dom.html.HTMLInputElement;
 
 import java.util.List;
 
@@ -35,7 +36,7 @@ public class BookPage extends BasePage {
 
     @FindBy(id = "description")
     public WebElement description;
-
+    public HTMLInputElement orderBtn;
 
 
     public WebElement editBook(String book) {
