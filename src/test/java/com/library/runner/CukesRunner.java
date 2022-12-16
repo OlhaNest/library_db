@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
         features = "src/test/resources/features" ,
-        glue = "com/library/steps",
+        glue = "com/library/step_defs",
         dryRun = false,
         tags = "@wip"
         //shift + command + F --> to check where we also have tags
